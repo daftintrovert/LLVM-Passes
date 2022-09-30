@@ -10,7 +10,7 @@
   $cd LLVM
   $mkdir install
   
-* unzip the same in /home/asahu/LLVM/
+* unzip the same in /home/vishal1005/LLVM/
 * go the source/unzipped directory, Read the README file
    $cd /home/vishal1005/LLVM/llvm-project-llvmorg-12.0.0/
 
@@ -20,8 +20,8 @@
      	*$cd build
 	*$cmake -G <generator> [options] ../llvm
 	
-        #by A Sahu //This line is updated
-        *$cmake --clean-first  -G "Unix Makefiles" DLLVM_PARALLEL_LINK_JOBS=1 -DLLVM_TARGETS_TO_BUILD=X86 -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/asahu/LLVM/install/ ../llvm
+        #by Vishal //This line is updated
+        *$cmake --clean-first  -G "Unix Makefiles" DLLVM_PARALLEL_LINK_JOBS=1 -DLLVM_TARGETS_TO_BUILD=X86 -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/vishal1005/LLVM/install/ ../llvm
 	
 
 	# Make/Compilation may take some hours
