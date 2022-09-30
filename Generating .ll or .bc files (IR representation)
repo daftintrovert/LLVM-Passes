@@ -1,0 +1,33 @@
+Let's say your new pass code is in folder named MyPass, then add this folder to llvm-project/llvm/lib/Transforms/.
+In this folder your code for custom pass should be MyPass.cpp, it should also contain MyPass.exports (this can be left empty) and CMakeLists.txt. 
+In this cmake file, add the following
+
+# If we don't need RTTI or EH, there's no reason to export anything
+# from the hello plugin.
+if( NOT LLVM_REQUIRES_RTTI )
+  if( NOT LLVM_REQUIRES_EH )
+    set(LLVM_EXPORTED_SYMBOL_FILE ${CMAKE_CURRENT_SOURCE_DIR}/MyPass.exports)
+  endif()
+endif()
+ 
+if(WIN32 OR CYGWIN)
+  set(LLVM_LINK_COMPONENTS Core Support)
+endif()
+ 
+add_llvm_library( LLVMMyPass MODULE BUILDTREE_ONLY
+  MyPass.cpp
+ 
+  DEPENDS
+  intrinsics_gen
+  PLUGIN_TOOL
+  opt
+  )
+
+2. in the file llvm-project/llvm/lib/Transforms/CMakeLists.txt append the line add_subdirectory(MyPass) at the end.
+3. now go to the build dir, and run the make command (you can use -j 8 to speed up this process)
+4. now create a sample llvm ir file from test.cpp using the following command : clang++ -S -emit-llvm test.cpp, this would produce test.ll
+5. now run you pass on test.ll using the command : 
+  <path-to-llvm>/llvm-project/build/bin/opt -enable-new-pm=0 -disable-output  -load LLVMMyPass.so  test.ll --mypass,
+  the --mypass is the name with which you register the pass in MyPass.cpp.
+
+
