@@ -6,23 +6,28 @@ using namespace llvm;
 
 #define DEBUG_TYPE "MyPass"
 
-STATISTIC(HelloCounter, "It counts total number of functions created");
+STATISTIC(HelloCounter, "It prints the name of functions present in the code");
 
 namespace {
 
-// Total_func is our first implementation
+// Finding name of the function is our first implementation
 
   struct MyPass : public FunctionPass {
     static char ID; // Pass identification, replacement for typeid
-    Total_func() : FunctionPass(ID) {}
+    MyPass() : FunctionPass(ID) {}
 
     bool runOnFunction(Function &F) override {
       ++HelloCounter;
-      errs() << "Total_func ";
+      errs() << "Function Name: ";
       errs().write_escaped(F.getName()) << HelloCounter << '\n';
       return false;
     }
   };
 }
+
 char MyPass::ID = 0;
-static RegisterPass<MyPass> X("MyPass", "Hello World Pass");
+static RegisterPass<MyPass> X("MyPass", "My Pass Analyse",
+	false, false
+);
+
+
