@@ -29,5 +29,8 @@ add_llvm_library( MyPass MODULE BUILDTREE_ONLY
 5. now run you pass on test.ll using the command : 
   <path-to-llvm>/llvm-project/build/bin/opt -enable-new-pm=0 -disable-output  -load LLVMMyPass.so  test.ll --mypass,
   the --mypass is the name with which you register the pass in MyPass.cpp.
+  
+  To generate .ll file for C program files. Use this command
+  clang -S -emit-llvm file_name.c
 
 
