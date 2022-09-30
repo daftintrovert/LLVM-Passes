@@ -1,0 +1,27 @@
+First go to____
+
+Home ----> LLVM ----> llvmproject ----> llvm ----> lib ----> Transforms
+
+Create a folder with name MaxBasicBlock(Do not change this name)
+
+Put three things in this :
+  1. CMakeLists.txt
+  2. MaxBasicBlock.cpp
+  3. MaxBasicBlock.exports
+  
+(All files are provided)
+
+After this navigate to 
+
+Home ----> LLVM ----> llvmproject ----> build ----> lib ----> Transforms
+
+Open your terminal on this path and type $make to build the changes we have done to LLVM.
+
+Now go inside the MaxBasicBlock folder now created and open the terminal on the same path and put command make to build.
+
+After doing so We will be able to create an .so file in ../build/lib as MaxBasicBlock.so
+
+Run our first pass with opt:
+
+    ./path of LLVM bin directory/opt -load/path of MaxBasicBlock.so -MaxBasicBlock <path of our .ll or .bc file name> /dev/null
+
