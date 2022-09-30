@@ -1,9 +1,7 @@
-#define DEBUG_TYPE "opCounter"#include "llvm/Pass.h"
-
+#define DEBUG_TYPE "opCounter"
+#include "llvm/Pass.h"
 #include "llvm/IR/Function.h"
-
 #include "llvm/Support/raw_ostream.h"
-
 #include <map>
 
 using namespace llvm;
