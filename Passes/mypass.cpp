@@ -4,7 +4,7 @@
 #include "llvm/Support/raw_ostream.h"
 using namespace llvm;
 
-#define DEBUG_TYPE "mypass"
+#define DEBUG_TYPE "MyPass"
 
 STATISTIC(HelloCounter, "It counts total number of functions created");
 
@@ -12,7 +12,7 @@ namespace {
 
 // Total_func is our first implementation
 
-  struct Total_func : public FunctionPass {
+  struct MyPass : public FunctionPass {
     static char ID; // Pass identification, replacement for typeid
     Total_func() : FunctionPass(ID) {}
 
@@ -24,5 +24,5 @@ namespace {
     }
   };
 }
-char MaxBasicBlock::ID = 0;
-static RegisterPass<Total_func> X("mypass", "Hello World Pass");
+char MyPass::ID = 0;
+static RegisterPass<MyPass> X("MyPass", "Hello World Pass");
