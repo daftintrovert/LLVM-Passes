@@ -1,0 +1,17 @@
+LLVM actually provides a pass that can output control flow graphs
+
+● Install a dot file viewer
+    ○ sudo apt install xdot (for linux)
+  
+● Generate a dot file with
+    ○ ./../opt -dot-cfg-only lbm.opt.ll > /dev/null
+    
+● View dot file with
+    ○ xdot .BounceBackBoundaryConditionX.dot
+    ○ xdot .ValueUpdateMain.dot
+    ○ xdot .initFValues.dot
+    
+    AND SO ON....
+    
+    
+    
