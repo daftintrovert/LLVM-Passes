@@ -9,6 +9,9 @@
 #include <llvm/Analysis/CFG.h>
 #include <list>
 
+#define DEBUG_TYPE "DFGPass"
+
+
 using namespace llvm;
 namespace {
 	struct DFGPass : public FunctionPass {
