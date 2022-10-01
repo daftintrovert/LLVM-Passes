@@ -10,6 +10,8 @@
 #include <map>
 using namespace llvm;
 
+#define DEBUG_TYPE "CFG"
+
 namespace {
 	struct CFGPass : public FunctionPass {
 		static char ID;
