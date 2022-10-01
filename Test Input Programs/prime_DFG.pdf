@@ -1,3 +1,5 @@
+[//]: # ({% raw %})
+
 %!PS-Adobe-3.0
 %%Creator: graphviz version 2.43.0 (0)
 %%Title: DFG for'main' function
@@ -2658,3 +2660,5 @@ grestore
 end
 restore
 %%EOF
+
+[//]: # ({% endraw %})
