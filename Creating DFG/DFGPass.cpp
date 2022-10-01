@@ -11,7 +11,6 @@
 
 #define DEBUG_TYPE "DFGPass"
 
-
 using namespace llvm;
 namespace {
 	struct DFGPass : public FunctionPass {
