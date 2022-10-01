@@ -1,0 +1,85 @@
+digraph "CFG for'Init' function" {
+	BB31 [shape=record, label="{BB31:\l\l  %1 = alloca i32, align 4\l
+  %2 = alloca i32, align 4\l
+  %3 = load float, float* @FORCING, align 4\l
+  %4 = fpext float %3 to double\l
+  %5 = fmul double 5.000000e-01, %4\l
+  %6 = fmul double %5, 1.280000e+02\l
+  %7 = fmul double %6, 1.280000e+02\l
+  %8 = load float, float* @KVISC, align 4\l
+  %9 = fpext float %8 to double\l
+  %10 = fdiv double %7, %9\l
+  %11 = fptrunc double %10 to float\l
+  store float %11, float* @UX, align 4\l
+  store i32 0, i32* %1, align 4\l
+  br label %12\l
+}"];
+	BB31-> BB32;
+	BB32 [shape=record, label="{BB32:\l\l  %13 = load i32, i32* %1, align 4\l
+  %14 = icmp slt i32 %13, 128\l
+  br i1 %14, label %15, label %22\l
+}"];
+	BB32-> BB33;
+	BB32-> BB34;
+	BB33 [shape=record, label="{BB33:\l\l  %16 = load i32, i32* %1, align 4\l
+  %17 = load i32, i32* %1, align 4\l
+  %18 = add nsw i32 %17, 8\l
+  call void @JxJyRhoFFprop(i32 noundef %16, i32 noundef %18)\l
+  br label %19\l
+}"];
+	BB33-> BB35;
+	BB35 [shape=record, label="{BB35:\l\l  %20 = load i32, i32* %1, align 4\l
+  %21 = add nsw i32 %20, 8\l
+  store i32 %21, i32* %1, align 4\l
+  br label %12, !llvm.loop !6\l
+}"];
+	BB35-> BB32;
+	BB34 [shape=record, label="{BB34:\l\l  store i32 0, i32* %2, align 4\l
+  br label %23\l
+}"];
+	BB34-> BB36;
+	BB36 [shape=record, label="{BB36:\l\l  %24 = load i32, i32* %2, align 4\l
+  %25 = icmp slt i32 %24, 128\l
+  br i1 %25, label %26, label %33\l
+}"];
+	BB36-> BB37;
+	BB36-> BB38;
+	BB37 [shape=record, label="{BB37:\l\l  %27 = load i32, i32* %2, align 4\l
+  %28 = load i32, i32* %2, align 4\l
+  %29 = add nsw i32 %28, 8\l
+  call void @initFValues(i32 noundef %27, i32 noundef %29)\l
+  br label %30\l
+}"];
+	BB37-> BB39;
+	BB39 [shape=record, label="{BB39:\l\l  %31 = load i32, i32* %2, align 4\l
+  %32 = add nsw i32 %31, 8\l
+  store i32 %32, i32* %2, align 4\l
+  br label %23, !llvm.loop !8\l
+}"];
+	BB39-> BB36;
+	BB38 [shape=record, label="{BB38:\l\l  store i32 0, i32* %2, align 4\l
+  br label %34\l
+}"];
+	BB38-> BB40;
+	BB40 [shape=record, label="{BB40:\l\l  %35 = load i32, i32* %2, align 4\l
+  %36 = icmp slt i32 %35, 128\l
+  br i1 %36, label %37, label %44\l
+}"];
+	BB40-> BB41;
+	BB40-> BB42;
+	BB41 [shape=record, label="{BB41:\l\l  %38 = load i32, i32* %2, align 4\l
+  %39 = load i32, i32* %2, align 4\l
+  %40 = add nsw i32 %39, 8\l
+  call void @CopyFpropAndFeq(i32 noundef %38, i32 noundef %40)\l
+  br label %41\l
+}"];
+	BB41-> BB43;
+	BB43 [shape=record, label="{BB43:\l\l  %42 = load i32, i32* %2, align 4\l
+  %43 = add nsw i32 %42, 8\l
+  store i32 %43, i32* %2, align 4\l
+  br label %34, !llvm.loop !9\l
+}"];
+	BB43-> BB40;
+	BB42 [shape=record, label="{BB42:\l\l  ret void\l
+}"];
+}
