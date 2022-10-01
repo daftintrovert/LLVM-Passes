@@ -1,19 +1,3 @@
-//===- DCE.cpp - Code to perform dead code elimination --------------------===//
-//
-// Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
-// See https://llvm.org/LICENSE.txt for license information.
-// SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
-//
-//===----------------------------------------------------------------------===//
-//
-// This file implements dead inst elimination and dead code elimination.
-//
-// Dead Inst Elimination performs a single pass over the function removing
-// instructions that are obviously dead.  Dead Code Elimination is similar, but
-// it rechecks instructions that were used by removed instructions to see if
-// they are newly dead.
-//
-//===----------------------------------------------------------------------===//
 
 #include "llvm/Transforms/Scalar/DCE.h"
 #include "llvm/ADT/SetVector.h"
