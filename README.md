@@ -17,5 +17,4 @@ Other components include:
 the [libc++ C++ standard library](https://libcxx.llvm.org),
 the [LLD linker](https://lld.llvm.org), and more.
 
-![DragonFull](https://user-images.githubusercontent.com/30869272/193448936-9cd3e9fd-0f00-40f6-a88f-67954645040e.png)
-
+![DragonMedium](https://user-images.githubusercontent.com/30869272/193449049-ca11b898-6258-4a38-9583-9390277b29f8.png)
