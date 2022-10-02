@@ -16,3 +16,6 @@ component compiles C, C++, Objective-C, and Objective-C++ code into LLVM bitcode
 Other components include:
 the [libc++ C++ standard library](https://libcxx.llvm.org),
 the [LLD linker](https://lld.llvm.org), and more.
+
+![DragonFull](https://user-images.githubusercontent.com/30869272/193448936-9cd3e9fd-0f00-40f6-a88f-67954645040e.png)
+
