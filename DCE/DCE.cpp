@@ -26,7 +26,7 @@ DEBUG_COUNTER(DCECounter, "dce-transform",
 
 namespace {
 struct RedundantDbgInstElimination : public FunctionPass {
-  static char ID; // Pass identification, replacement for typeid
+  static char ID; // Pass identification, replacement for the typeid
   RedundantDbgInstElimination() : FunctionPass(ID) {
     initializeRedundantDbgInstEliminationPass(*PassRegistry::getPassRegistry());
   }
