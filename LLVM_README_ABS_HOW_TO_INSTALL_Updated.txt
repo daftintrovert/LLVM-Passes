@@ -15,7 +15,7 @@
    $cd /home/vishal1005/LLVM/llvm-project-llvmorg-12.0.0/
 
 ==================================
-	*$pwd    //shows /home/asahu/LLVM/llvm-project-llvmorg-12.0.0/
+	*$pwd    //shows /home/vishal1005/LLVM/llvm-project-llvmorg-12.0.0/
 	*$mkdir build
      	*$cd build
 	*$cmake -G <generator> [options] ../llvm
