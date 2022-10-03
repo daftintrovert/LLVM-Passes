@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+//taking some bunch of functions to make Control Flow Graph
+
 void f1(){
 
    printf("f1\n");
