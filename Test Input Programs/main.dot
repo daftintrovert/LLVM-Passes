@@ -1,77 +1,275 @@
 digraph "CFG for'main' function" {
 	BB0 [shape=record, label="{BB0:\l\l  %1 = alloca i32, align 4\l
-  %2 = alloca i32, align 4\l
-  %3 = alloca i32, align 4\l
+  %2 = alloca [50 x [50 x i32]], align 16\l
+  %3 = alloca [50 x [50 x i32]], align 16\l
   %4 = alloca i32, align 4\l
+  %5 = alloca i32, align 4\l
+  %6 = alloca i32, align 4\l
+  %7 = alloca i32, align 4\l
+  %8 = alloca i32, align 4\l
+  %9 = alloca i32, align 4\l
+  %10 = alloca i32, align 4\l
+  %11 = alloca i32, align 4\l
+  %12 = alloca [50 x [50 x i32]], align 16\l
+  %13 = alloca i32, align 4\l
+  %14 = alloca i32, align 4\l
+  %15 = alloca i32, align 4\l
+  %16 = alloca i32, align 4\l
+  %17 = alloca i32, align 4\l
+  %18 = alloca i32, align 4\l
   store i32 0, i32* %1, align 4\l
-  store i32 0, i32* %4, align 4\l
-  %5 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([27 x i8], [27 x i8]* @.str, i64 0, i64 0))\l
-  %6 = call i32 (i8*, ...) @__isoc99_scanf(i8* noundef getelementptr inbounds ([3 x i8], [3 x i8]* @.str.1, i64 0, i64 0), i32* noundef %2)\l
-  %7 = load i32, i32* %2, align 4\l
-  %8 = icmp eq i32 %7, 0\l
-  br i1 %8, label %12, label %9\l
+  %19 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([32 x i8], [32 x i8]* @.str, i64 0, i64 0))\l
+  %20 = call i32 (i8*, ...) @__isoc99_scanf(i8* noundef getelementptr inbounds ([6 x i8], [6 x i8]* @.str.1, i64 0, i64 0), i32* noundef %4, i32* noundef %5)\l
+  %21 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([32 x i8], [32 x i8]* @.str.2, i64 0, i64 0))\l
+  %22 = call i32 (i8*, ...) @__isoc99_scanf(i8* noundef getelementptr inbounds ([6 x i8], [6 x i8]* @.str.1, i64 0, i64 0), i32* noundef %6, i32* noundef %7)\l
+  %23 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([34 x i8], [34 x i8]* @.str.3, i64 0, i64 0))\l
+  store i32 0, i32* %8, align 4\l
+  br label %24\l
 }"];
 	BB0-> BB1;
-	BB0-> BB2;
-	BB2 [shape=record, label="{BB2:\l\l  %10 = load i32, i32* %2, align 4\l
-  %11 = icmp eq i32 %10, 1\l
-  br i1 %11, label %12, label %13\l
+	BB1 [shape=record, label="{BB1:\l\l  %25 = load i32, i32* %8, align 4\l
+  %26 = load i32, i32* %4, align 4\l
+  %27 = icmp slt i32 %25, %26\l
+  br i1 %27, label %28, label %48\l
 }"];
-	BB2-> BB1;
-	BB2-> BB3;
-	BB1 [shape=record, label="{BB1:\l\l  store i32 1, i32* %4, align 4\l
-  br label %13\l
-}"];
+	BB1-> BB2;
 	BB1-> BB3;
-	BB3 [shape=record, label="{BB3:\l\l  store i32 2, i32* %3, align 4\l
-  br label %14\l
+	BB2 [shape=record, label="{BB2:\l\l  store i32 0, i32* %9, align 4\l
+  br label %29\l
 }"];
-	BB3-> BB4;
-	BB4 [shape=record, label="{BB4:\l\l  %15 = load i32, i32* %3, align 4\l
-  %16 = load i32, i32* %2, align 4\l
-  %17 = sdiv i32 %16, 2\l
-  %18 = icmp sle i32 %15, %17\l
-  br i1 %18, label %19, label %29\l
+	BB2-> BB4;
+	BB4 [shape=record, label="{BB4:\l\l  %30 = load i32, i32* %9, align 4\l
+  %31 = load i32, i32* %5, align 4\l
+  %32 = icmp slt i32 %30, %31\l
+  br i1 %32, label %33, label %44\l
 }"];
 	BB4-> BB5;
 	BB4-> BB6;
-	BB5 [shape=record, label="{BB5:\l\l  %20 = load i32, i32* %2, align 4\l
-  %21 = load i32, i32* %3, align 4\l
-  %22 = srem i32 %20, %21\l
-  %23 = icmp eq i32 %22, 0\l
-  br i1 %23, label %24, label %25\l
+	BB5 [shape=record, label="{BB5:\l\l  %34 = load i32, i32* %8, align 4\l
+  %35 = sext i32 %34 to i64\l
+  %36 = getelementptr inbounds [50 x [50 x i32]], [50 x [50 x i32]]* %2, i64 0, i64 %35\l
+  %37 = load i32, i32* %9, align 4\l
+  %38 = sext i32 %37 to i64\l
+  %39 = getelementptr inbounds [50 x i32], [50 x i32]* %36, i64 0, i64 %38\l
+  %40 = call i32 (i8*, ...) @__isoc99_scanf(i8* noundef getelementptr inbounds ([3 x i8], [3 x i8]* @.str.4, i64 0, i64 0), i32* noundef %39)\l
+  br label %41\l
 }"];
 	BB5-> BB7;
-	BB5-> BB8;
-	BB7 [shape=record, label="{BB7:\l\l  store i32 1, i32* %4, align 4\l
-  br label %29\l
+	BB7 [shape=record, label="{BB7:\l\l  %42 = load i32, i32* %9, align 4\l
+  %43 = add nsw i32 %42, 1\l
+  store i32 %43, i32* %9, align 4\l
+  br label %29, !llvm.loop !6\l
 }"];
-	BB7-> BB6;
-	BB8 [shape=record, label="{BB8:\l\l  br label %26\l
+	BB7-> BB4;
+	BB6 [shape=record, label="{BB6:\l\l  br label %45\l
 }"];
-	BB8-> BB9;
-	BB9 [shape=record, label="{BB9:\l\l  %27 = load i32, i32* %3, align 4\l
-  %28 = add nsw i32 %27, 1\l
-  store i32 %28, i32* %3, align 4\l
-  br label %14, !llvm.loop !6\l
+	BB6-> BB8;
+	BB8 [shape=record, label="{BB8:\l\l  %46 = load i32, i32* %8, align 4\l
+  %47 = add nsw i32 %46, 1\l
+  store i32 %47, i32* %8, align 4\l
+  br label %24, !llvm.loop !8\l
 }"];
-	BB9-> BB4;
-	BB6 [shape=record, label="{BB6:\l\l  %30 = load i32, i32* %4, align 4\l
-  %31 = icmp eq i32 %30, 0\l
-  br i1 %31, label %32, label %35\l
+	BB8-> BB1;
+	BB3 [shape=record, label="{BB3:\l\l  %49 = load i32, i32* %6, align 4\l
+  %50 = load i32, i32* %5, align 4\l
+  %51 = icmp ne i32 %49, %50\l
+  br i1 %51, label %52, label %54\l
 }"];
-	BB6-> BB10;
-	BB6-> BB11;
-	BB10 [shape=record, label="{BB10:\l\l  %33 = load i32, i32* %2, align 4\l
-  %34 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([22 x i8], [22 x i8]* @.str.2, i64 0, i64 0), i32 noundef %33)\l
-  br label %38\l
+	BB3-> BB9;
+	BB3-> BB10;
+	BB9 [shape=record, label="{BB9:\l\l  %53 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([36 x i8], [36 x i8]* @.str.5, i64 0, i64 0))\l
+  br label %81\l
+}"];
+	BB9-> BB11;
+	BB10 [shape=record, label="{BB10:\l\l  %55 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([34 x i8], [34 x i8]* @.str.6, i64 0, i64 0))\l
+  store i32 0, i32* %10, align 4\l
+  br label %56\l
 }"];
 	BB10-> BB12;
-	BB11 [shape=record, label="{BB11:\l\l  %36 = load i32, i32* %2, align 4\l
-  %37 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([26 x i8], [26 x i8]* @.str.3, i64 0, i64 0), i32 noundef %36)\l
-  br label %38\l
+	BB12 [shape=record, label="{BB12:\l\l  %57 = load i32, i32* %10, align 4\l
+  %58 = load i32, i32* %6, align 4\l
+  %59 = icmp slt i32 %57, %58\l
+  br i1 %59, label %60, label %80\l
 }"];
-	BB11-> BB12;
-	BB12 [shape=record, label="{BB12:\l\l  ret i32 0\l
+	BB12-> BB13;
+	BB12-> BB14;
+	BB13 [shape=record, label="{BB13:\l\l  store i32 0, i32* %11, align 4\l
+  br label %61\l
+}"];
+	BB13-> BB15;
+	BB15 [shape=record, label="{BB15:\l\l  %62 = load i32, i32* %11, align 4\l
+  %63 = load i32, i32* %7, align 4\l
+  %64 = icmp slt i32 %62, %63\l
+  br i1 %64, label %65, label %76\l
+}"];
+	BB15-> BB16;
+	BB15-> BB17;
+	BB16 [shape=record, label="{BB16:\l\l  %66 = load i32, i32* %10, align 4\l
+  %67 = sext i32 %66 to i64\l
+  %68 = getelementptr inbounds [50 x [50 x i32]], [50 x [50 x i32]]* %3, i64 0, i64 %67\l
+  %69 = load i32, i32* %11, align 4\l
+  %70 = sext i32 %69 to i64\l
+  %71 = getelementptr inbounds [50 x i32], [50 x i32]* %68, i64 0, i64 %70\l
+  %72 = call i32 (i8*, ...) @__isoc99_scanf(i8* noundef getelementptr inbounds ([4 x i8], [4 x i8]* @.str.7, i64 0, i64 0), i32* noundef %71)\l
+  br label %73\l
+}"];
+	BB16-> BB18;
+	BB18 [shape=record, label="{BB18:\l\l  %74 = load i32, i32* %11, align 4\l
+  %75 = add nsw i32 %74, 1\l
+  store i32 %75, i32* %11, align 4\l
+  br label %61, !llvm.loop !9\l
+}"];
+	BB18-> BB15;
+	BB17 [shape=record, label="{BB17:\l\l  br label %77\l
+}"];
+	BB17-> BB19;
+	BB19 [shape=record, label="{BB19:\l\l  %78 = load i32, i32* %10, align 4\l
+  %79 = add nsw i32 %78, 1\l
+  store i32 %79, i32* %10, align 4\l
+  br label %56, !llvm.loop !10\l
+}"];
+	BB19-> BB12;
+	BB14 [shape=record, label="{BB14:\l\l  br label %81\l
+}"];
+	BB14-> BB11;
+	BB11 [shape=record, label="{BB11:\l\l  store i32 0, i32* %13, align 4\l
+  store i32 0, i32* %14, align 4\l
+  br label %82\l
+}"];
+	BB11-> BB20;
+	BB20 [shape=record, label="{BB20:\l\l  %83 = load i32, i32* %14, align 4\l
+  %84 = load i32, i32* %4, align 4\l
+  %85 = icmp slt i32 %83, %84\l
+  br i1 %85, label %86, label %132\l
+}"];
+	BB20-> BB21;
+	BB20-> BB22;
+	BB21 [shape=record, label="{BB21:\l\l  store i32 0, i32* %15, align 4\l
+  br label %87\l
+}"];
+	BB21-> BB23;
+	BB23 [shape=record, label="{BB23:\l\l  %88 = load i32, i32* %15, align 4\l
+  %89 = load i32, i32* %7, align 4\l
+  %90 = icmp slt i32 %88, %89\l
+  br i1 %90, label %91, label %128\l
+}"];
+	BB23-> BB24;
+	BB23-> BB25;
+	BB24 [shape=record, label="{BB24:\l\l  store i32 0, i32* %16, align 4\l
+  br label %92\l
+}"];
+	BB24-> BB26;
+	BB26 [shape=record, label="{BB26:\l\l  %93 = load i32, i32* %16, align 4\l
+  %94 = load i32, i32* %6, align 4\l
+  %95 = icmp slt i32 %93, %94\l
+  br i1 %95, label %96, label %117\l
+}"];
+	BB26-> BB27;
+	BB26-> BB28;
+	BB27 [shape=record, label="{BB27:\l\l  %97 = load i32, i32* %13, align 4\l
+  %98 = load i32, i32* %14, align 4\l
+  %99 = sext i32 %98 to i64\l
+  %100 = getelementptr inbounds [50 x [50 x i32]], [50 x [50 x i32]]* %2, i64 0, i64 %99\l
+  %101 = load i32, i32* %16, align 4\l
+  %102 = sext i32 %101 to i64\l
+  %103 = getelementptr inbounds [50 x i32], [50 x i32]* %100, i64 0, i64 %102\l
+  %104 = load i32, i32* %103, align 4\l
+  %105 = load i32, i32* %16, align 4\l
+  %106 = sext i32 %105 to i64\l
+  %107 = getelementptr inbounds [50 x [50 x i32]], [50 x [50 x i32]]* %2, i64 0, i64 %106\l
+  %108 = load i32, i32* %15, align 4\l
+  %109 = sext i32 %108 to i64\l
+  %110 = getelementptr inbounds [50 x i32], [50 x i32]* %107, i64 0, i64 %109\l
+  %111 = load i32, i32* %110, align 4\l
+  %112 = mul nsw i32 %104, %111\l
+  %113 = add nsw i32 %97, %112\l
+  store i32 %113, i32* %13, align 4\l
+  br label %114\l
+}"];
+	BB27-> BB29;
+	BB29 [shape=record, label="{BB29:\l\l  %115 = load i32, i32* %16, align 4\l
+  %116 = add nsw i32 %115, 1\l
+  store i32 %116, i32* %16, align 4\l
+  br label %92, !llvm.loop !11\l
+}"];
+	BB29-> BB26;
+	BB28 [shape=record, label="{BB28:\l\l  %118 = load i32, i32* %13, align 4\l
+  %119 = load i32, i32* %14, align 4\l
+  %120 = sext i32 %119 to i64\l
+  %121 = getelementptr inbounds [50 x [50 x i32]], [50 x [50 x i32]]* %12, i64 0, i64 %120\l
+  %122 = load i32, i32* %15, align 4\l
+  %123 = sext i32 %122 to i64\l
+  %124 = getelementptr inbounds [50 x i32], [50 x i32]* %121, i64 0, i64 %123\l
+  store i32 %118, i32* %124, align 4\l
+  store i32 0, i32* %13, align 4\l
+  br label %125\l
+}"];
+	BB28-> BB30;
+	BB30 [shape=record, label="{BB30:\l\l  %126 = load i32, i32* %15, align 4\l
+  %127 = add nsw i32 %126, 1\l
+  store i32 %127, i32* %15, align 4\l
+  br label %87, !llvm.loop !12\l
+}"];
+	BB30-> BB23;
+	BB25 [shape=record, label="{BB25:\l\l  br label %129\l
+}"];
+	BB25-> BB31;
+	BB31 [shape=record, label="{BB31:\l\l  %130 = load i32, i32* %14, align 4\l
+  %131 = add nsw i32 %130, 1\l
+  store i32 %131, i32* %14, align 4\l
+  br label %82, !llvm.loop !13\l
+}"];
+	BB31-> BB20;
+	BB22 [shape=record, label="{BB22:\l\l  %133 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([20 x i8], [20 x i8]* @.str.8, i64 0, i64 0))\l
+  store i32 0, i32* %17, align 4\l
+  br label %134\l
+}"];
+	BB22-> BB32;
+	BB32 [shape=record, label="{BB32:\l\l  %135 = load i32, i32* %17, align 4\l
+  %136 = load i32, i32* %4, align 4\l
+  %137 = icmp slt i32 %135, %136\l
+  br i1 %137, label %138, label %159\l
+}"];
+	BB32-> BB33;
+	BB32-> BB34;
+	BB33 [shape=record, label="{BB33:\l\l  store i32 0, i32* %18, align 4\l
+  br label %139\l
+}"];
+	BB33-> BB35;
+	BB35 [shape=record, label="{BB35:\l\l  %140 = load i32, i32* %18, align 4\l
+  %141 = load i32, i32* %7, align 4\l
+  %142 = icmp slt i32 %140, %141\l
+  br i1 %142, label %143, label %155\l
+}"];
+	BB35-> BB36;
+	BB35-> BB37;
+	BB36 [shape=record, label="{BB36:\l\l  %144 = load i32, i32* %17, align 4\l
+  %145 = sext i32 %144 to i64\l
+  %146 = getelementptr inbounds [50 x [50 x i32]], [50 x [50 x i32]]* %12, i64 0, i64 %145\l
+  %147 = load i32, i32* %18, align 4\l
+  %148 = sext i32 %147 to i64\l
+  %149 = getelementptr inbounds [50 x i32], [50 x i32]* %146, i64 0, i64 %148\l
+  %150 = load i32, i32* %149, align 4\l
+  %151 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([4 x i8], [4 x i8]* @.str.7, i64 0, i64 0), i32 noundef %150)\l
+  br label %152\l
+}"];
+	BB36-> BB38;
+	BB38 [shape=record, label="{BB38:\l\l  %153 = load i32, i32* %18, align 4\l
+  %154 = add nsw i32 %153, 1\l
+  store i32 %154, i32* %18, align 4\l
+  br label %139, !llvm.loop !14\l
+}"];
+	BB38-> BB35;
+	BB37 [shape=record, label="{BB37:\l\l  br label %156\l
+}"];
+	BB37-> BB39;
+	BB39 [shape=record, label="{BB39:\l\l  %157 = load i32, i32* %17, align 4\l
+  %158 = add nsw i32 %157, 1\l
+  store i32 %158, i32* %17, align 4\l
+  br label %134, !llvm.loop !15\l
+}"];
+	BB39-> BB32;
+	BB34 [shape=record, label="{BB34:\l\l  %160 = load i32, i32* %1, align 4\l
+  ret i32 %160\l
 }"];
 }
