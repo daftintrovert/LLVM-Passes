@@ -10,6 +10,8 @@ itself called "LLVM". This contains all of the tools, libraries, and header
 files needed to process intermediate representations and converts it into
 object files.  Tools include an assembler, disassembler, bitcode analyzer, and
 bitcode optimizer.  It also contains basic regression tests.
+![Screenshot from 2022-10-06 00-40-17](https://user-images.githubusercontent.com/30869272/194142684-f1bf1cff-58a5-4277-b9c2-22168cef6fc2.png)
+
 
 C-like languages use the [Clang](http://clang.llvm.org/) front end.  This
 component compiles C, C++, Objective-C, and Objective-C++ code into LLVM bitcode
