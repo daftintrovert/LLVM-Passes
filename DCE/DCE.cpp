@@ -22,7 +22,6 @@ DEBUG_COUNTER(DCECounter, "dce-transform",
 
 //===--------------------------------------------------------------------===//
 // RedundantDbgInstElimination pass implementation
-//
 
 namespace {
 struct RedundantDbgInstElimination : public FunctionPass {
