@@ -12,7 +12,8 @@ using namespace llvm;
 STATISTIC(HelloCounter, "Counts number of functions greeted");
 
 namespace {
-  // Hello - The first implementation, without getAnalysisUsage.
+  //first function has a pass named hello and it returns the names of the function in our code
+  
   struct Hello : public FunctionPass {
     static char ID; // Pass identification, replacement for typeid
     Hello() : FunctionPass(ID) {}
@@ -30,18 +31,19 @@ char Hello::ID = 0;
 static RegisterPass<Hello> X("hello", "Hello World Pass");
 
 namespace {
-  // Hello2 - The second implementation with getAnalysisUsage implemented.
+  // this is the second implementation and here our pass is hello2 which gives the function name as well as the total count of instructions and basic blocks.
+  
   struct Hello2 : public FunctionPass {
     static char ID; // Pass identification, replacement for typeid
     Hello2() : FunctionPass(ID) {}
 
     bool runOnFunction(Function &F) override {
-      unsigned int basicBlockCount = 0;
+      unsigned int basicBlockCount = 0; //we have declared two counters which will store the value of basic block counts and instruction count.
       unsigned int instructionCount = 0;
       for(BasicBlock &bb : F){
       	++basicBlockCount;
       	for(Instruction &i : bb){
-      		++instructionCount;
+      		++instructionCount;      //the for loop will iterate over our code to give us the required counts.
       		
       		}
       	}
