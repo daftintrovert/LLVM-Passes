@@ -31,7 +31,7 @@ char Hello::ID = 0;
 static RegisterPass<Hello> X("hello", "Hello World Pass");
 
 namespace {
-  // this is the second implementation and here our pass is hello2 which gives the function name as well as the total count of instructions and basic blocks.
+  // this is the second implementation and here our pass is hello2 which gives the function name as well as the total counts of instructions and basic blocks.
   
   struct Hello2 : public FunctionPass {
     static char ID; // Pass identification, replacement for typeid
