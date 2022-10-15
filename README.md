@@ -1,7 +1,7 @@
 ![DragonMedium](https://user-images.githubusercontent.com/30869272/193449049-ca11b898-6258-4a38-9583-9390277b29f8.png)
 
 # LLVM-Passes
-Some common passes for the LLVM and how to use it to run over our .ll or .bc files
+Some common passes for the LLVM and how to use it to run over our intermediate generated .ll or .bc files
 
 Welcome to the LLVM project!
 
