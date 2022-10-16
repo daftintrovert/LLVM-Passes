@@ -29,7 +29,7 @@ namespace {
       which will keep the total instruction counts and output
       the block name with the most number of instructions*/
 
-      long unsigned int MaxSize=0; 
+      long unsigned int MaxSize=0; //Max size counter initialised at 0.
       Function::iterator bb;
 
       for(Function::iterator BB=F.begin();BB!=F.end();++BB){
