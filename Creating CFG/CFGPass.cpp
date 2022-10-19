@@ -17,7 +17,7 @@ namespace {
 		static char ID;
 		std::error_code error;
 		std::string str;
-		//StringMap<int> basicblockMap;
+		//StringMap<int>basicblockMap;
 		std::map<BasicBlock*, int> basicBlockMap;
 		int bbCount;  
 		CFGPass() : FunctionPass(ID){
