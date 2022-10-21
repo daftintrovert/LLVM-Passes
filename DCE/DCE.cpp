@@ -79,7 +79,7 @@ static bool DCEInstruction(Instruction *I,
     salvageKnowledge(I);
 
     // Null out all of the instruction's operands to see if any operand becomes
-    // dead as we go.
+   
     for (unsigned i = 0, e = I->getNumOperands(); i != e; ++i) {
       Value *OpV = I->getOperand(i);
       I->setOperand(i, nullptr);
