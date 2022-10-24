@@ -4,7 +4,7 @@
 * install clang, swapspace, cmake using $sudo apt-get install  cmake clang swapsapce 
 
 * Download llvm-project-llvmorg-12.0.0.tar.gz (or recent version) from LLVM offical website
-   "Source code (tar.gz)" 
+   "Source code (tar.gz)
 
 * Create a LLVM directory in your home directory 
   $cd LLVM
