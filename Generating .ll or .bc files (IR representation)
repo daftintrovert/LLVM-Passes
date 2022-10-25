@@ -2,7 +2,7 @@ Let's say your new pass code is in folder named MyPass, then add this folder to 
 In this folder your code for custom pass should be MyPass.cpp, it should also contain MyPass.exports (this can be left empty) and CMakeLists.txt. 
 In this cmake file, add the following
 
-# If we don't need RTTI or EH, there's no reason to export anything
+# If we don't need RTTI or EH, there's no reason to export anything.
 # from the hello plugin.
 if( NOT LLVM_REQUIRES_RTTI )
   if( NOT LLVM_REQUIRES_EH )
