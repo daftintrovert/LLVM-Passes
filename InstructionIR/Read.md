@@ -14,7 +14,7 @@ STEP 4:
     In llvm-project-llvmorg-12.0.0/llvm/lib/Transforms/Assignment3 we create a new file "CMakeLists.txt" to set up build script for compiling the new pass.
 
 STEP 5:
-    In llvm-project-llvmorg-12.0.0/llvm/lib/Transforms/Assignment3 we create a new file for the C++ code for the pass. In this case, the name of the C++ file is "InstrumentIR.cpp".
+    In llvm-project-llvmorg-12.0.0/llvm/lib/Transforms/Assignment3 we create a new file for the C++ code for the pass. In this case, the name of the C++ file is "InstrumentIR.cpp"
 
 STEP 6:
     In llvm-project-llvmorg-12.0.0/build recompile using "make" command
