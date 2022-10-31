@@ -1,4 +1,4 @@
-# If we don't need RTTI or EH, there's no reason to export anything
+# If we don't need RTTI or EH, there is no reason to export anything
 # from the hello plugin.
 if( NOT LLVM_REQUIRES_RTTI )
   if( NOT LLVM_REQUIRES_EH )
