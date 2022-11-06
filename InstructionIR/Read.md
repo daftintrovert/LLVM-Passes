@@ -25,4 +25,4 @@ STEP 7:
 
 STEP 8:
     Run command bin/opt -load lib/LLVMInstrumentIR.so -InstrumentIR -enable-new-pm=0 < ~/(name of C file).ll > /dev/null to run the pass for the test .ll file.
-    The pass inserts function calls to printL and printS accordingly.
+    The pass inserts function calls to printL and printS accordingly
