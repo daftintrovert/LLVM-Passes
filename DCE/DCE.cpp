@@ -20,7 +20,7 @@ STATISTIC(DCEEliminated, "Number of insts removed");
 DEBUG_COUNTER(DCECounter, "dce-transform",
               "Controls which instructions are eliminated");
 
-//===--------------------------------------------------------------------===//
+//===--------------------------------------------------------------------==//
 // RedundantDbgInstElimination pass implementation
 
 namespace {
