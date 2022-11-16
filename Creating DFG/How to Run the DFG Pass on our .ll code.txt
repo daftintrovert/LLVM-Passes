@@ -2,7 +2,7 @@ First go to____
 
 Home ----> LLVM ----> llvmproject ----> llvm ----> lib ----> Transforms
 
-Create a folder with name MaxBasicBlock(Do not change this name)
+Create a folder with name MaxBasicBlock(Do not change this name).
 
 Put three things in this :
   1. CMakeLists.txt
