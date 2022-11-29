@@ -19,4 +19,4 @@ component compiles C, C++, Objective-C, and Objective-C++ code into LLVM bitcode
 
 Other components include:
 the [libc++ C++ standard library](https://libcxx.llvm.org),
-the [LLD linker](https://lld.llvm.org), and more
+the [LLD linker](https://lld.llvm.org), and more.
