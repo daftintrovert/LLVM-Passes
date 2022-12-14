@@ -3,7 +3,7 @@
 # LLVM-Passes
 Some common passes for the LLVM and how to use it to run over our intermediate generated .ll or .bc files
 
-Welcome to the LLVM project!
+Welcome to the LLVM project
 
 The LLVM project has multiple components. The core of the project is
 itself called "LLVM". This contains all of the tools, libraries, and header
